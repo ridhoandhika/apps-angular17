@@ -1,0 +1,128 @@
+<div
+  class="static translate bg-slate-800 transition-all duration-300 ease-in-out"
+  [class]="+isOpen ? 'w-[300px]' : 'w-16'"
+>
+  <div class="flex flex-col justify-between h-screen sticky inset-0 w-ful">
+    <div
+      class="flex items-center border-b border-b-neutral-400 transition-none px-4"
+      [class]="isOpen ? 'p-4 justify-between' : 'py-4 justify-center'"
+    >
+      <h2
+        class="text-3xl font-semibold text-center text-blue-800 transition-all delay-150 duration-300 overflow-hidden"
+        [class]="isOpen ? 'block' : 'hidden'"
+      >
+        Logo
+      </h2>
+      <button
+        class="btn btn-sm bg-transparent outline-none border-none grid place-content-center hover:bg-indigo-800 w-10 h-10 rounded-lg opacity-0 md:opacity-100"
+        (click)="onClickBurger()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="20"
+          height="20"
+          viewBox="0 0 50 50"
+        >
+          <path
+            fill="#ffffff"
+            d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div class="flex items-center justify-center p-4 border-b border-b-neutral-400">
+      <img
+        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=500&h=500&q=100"
+        alt="profile image"
+        class="rounded-full"
+      />
+    </div>
+    <div class="flex-grow justify-between">
+      <ul
+        class="my-2 flex flex-col gap-2 items-stretch"
+        [class]="isOpen ? 'px-4' : ''"
+      >
+        <li>
+          <a
+            class="items-center px-4 py-2 text-gray-400 rounded-md hover:bg-gray-200"
+            [class]="isOpen ? 'flex' : 'block'"
+            href="#"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+
+            <span
+              class="mx-4 font-medium transition-all delay-150 duration-300 overflow-hidden w-full"
+              [class]="isOpen ? 'block' : 'hidden '"
+              >Dashboard</span
+            >
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="items-center px-4 py-2 text-gray-400 rounded-md hover:bg-gray-200"
+            [class]="isOpen ? 'flex' : 'block'"
+            href="#"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+
+            <span
+              class="mx-4 font-medium transition-all delay-150 duration-300 overflow-hidden w-full"
+              [class]="isOpen ? 'block' : 'hidden'"
+              >Settings</span
+            >
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid place-content-stretch p-4">
+      <div className="flex gap-4 items-center h-11 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          alt="profile image"
+          class="rounded-full"
+          height="36"
+          width="36"
+        />
+        <!-- <div class="flex flex-col">
+          <span class="text-indigo-50 my-0">Tom Cook</span>
+          <a href="/" class="text-indigo-200 text-sm"> View Profile </a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
